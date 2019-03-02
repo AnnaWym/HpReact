@@ -1,0 +1,35 @@
+.menu {
+    padding: 10px;
+    height: 50px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.option {
+    float: left;
+    min-width: 50px;
+    height: 25px;
+    font-size: 18px;
+    padding: 10px;
+    border-right: 2px dotted #444444;
+    opacity: 0.8;
+    color: white;
+}
+
+.option:hover {
+    background-color: #000000;
+    cursor: pointer;
+}
+
+.optionL {
+    font-size: 18px;
+    height: 25px;
+    padding: 10px;
+    border-bottom: 2px dotted #444444;
+}
+
+.optionL:hover {
+    background-color: #f36742;
+    cursor: pointer;
+}
