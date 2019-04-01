@@ -1,18 +1,19 @@
 import React from 'react'
 import Book from './Book'
 import pageStyle from '../Styles/pageStyle'
+import ksiazki from '../dane/ksiazki'
 
 function BooksPage(props){
 
     return ( 
         <body style={pageStyle}>
-            <Book podtytul="Kamień Filozoficzny"/>
-            <Book podtytul="Komnata Tajemnic"/>
-            <Book podtytul="Więzień Azkabanu"/>
-            <Book podtytul="Czara Ognia"/>
-            <Book podtytul="Zakon Feniksa"/>
-            <Book podtytul="Książe Półkrwi"/>
-            <Book podtytul="Insygnia Śmierci"/>
+            <Book dane={ksiazki.HP1}/>
+            <Book dane={ksiazki.HP2}/>
+            <Book dane={ksiazki.HP3}/>
+            <Book dane={ksiazki.HP4}/>
+            <Book dane={ksiazki.HP5}/>
+            <Book dane={ksiazki.HP6}/>
+            <Book dane={ksiazki.HP7}/>
         </body>
     )
 }

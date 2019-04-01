@@ -6,26 +6,38 @@ function Book(props){
         marginRight:"auto",
         width:"60%",
         textAlign:"center",
-        opacity:"1.0 !important"
+        opacity:"1.0 !important",
+        marginBottom: "20px",
+        
     }
 
-    let haryPotterStyl = {
+    let tytulStyl = {
         color:"white",
         fontWeight:"bold",
+        fontStyle:"italic",
+        textAlign:"center",
+        marginRight: "5px",
+    }
+
+    let podtytulStyl = {
+        color:"white",
         fontStyle:"italic",
         textAlign:"center"
     }
 
-    let rok ={
+    let rokStyl ={
+        color:"white",
+        textAlign:"center",
         fontSize:"15px",
+        fontWeight:"600",
+        
     }
 
     return ( 
         <div style={styles}>
-            <span style={haryPotterStyl}>Harry Potter</span><br/> i {props.podtytul}
-            <br/>
-            <span style={rok}>Rok wydania: 1997</span>
-            <hr/>
+            <span style={tytulStyl}>{props.dane.tytul}</span><span style={podtytulStyl}>{props.dane.podtytul}</span><br/>
+            <span style={rokStyl}>Data premiery: {props.dane.dataPremiery}</span><br/>
+            <span style={rokStyl}>Data premiery w Polsce: {props.dane.dataPremieryPl}</span>
         </div>
     )
 }
