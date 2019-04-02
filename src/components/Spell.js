@@ -4,8 +4,10 @@ function Spell(props){
     let styles = {
         marginLeft:"auto",
         marginRight:"auto",
+        marginBottom: "20px",
+        borderBottom: "2px solid white",
         width:"60%",
-        textAlign:"center"
+        textAlign:"center",
     }
 
     let czarStylBialy = {

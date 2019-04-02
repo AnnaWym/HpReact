@@ -9,7 +9,6 @@
 .option {
     float: left;
     min-width: 50px;
-    height: 25px;
     font-size: 18px;
     padding: 10px;
     border-right: 2px dotted #444444;
