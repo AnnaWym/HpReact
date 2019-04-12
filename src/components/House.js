@@ -11,13 +11,6 @@ function House(props){
         opacity:"1.0 !important",
     }
 
-    let haryPotterStyl = {
-        color:"white",
-        fontWeight:"bold",
-        fontStyle:"italic",
-        textAlign:"center"
-    }
-
     let info ={
         fontSize:"16px",
         fontWeight:"bold",
@@ -55,24 +48,24 @@ function House(props){
         textAlign:"center"
     }
 
-    let stylDomow = "";
+    let stylDomow = {};
 
-    if(props.dane.dom == "Gryffindor")
+    if(props.dane.dom === "Gryffindor")
     {
         stylDomow = domCzerwony    
     }
 
-    if(props.dane.dom == "Slytherin")
+    if(props.dane.dom === "Slytherin")
     {
         stylDomow = domZielony    
     }
 
-    if(props.dane.dom == "Hufflepuff")
+    if(props.dane.dom === "Hufflepuff")
     {
         stylDomow = domZolty   
     }
 
-    if(props.dane.dom == "Ravenclaw")
+    if(props.dane.dom === "Ravenclaw")
     {
         stylDomow = domNiebieski    
     }

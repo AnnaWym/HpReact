@@ -41,7 +41,7 @@ function Book(props){
     return ( 
         <Col md={6} lg={6}>
             <div style={styles}>
-                <img style={img} src={props.dane.okladka}></img><br/>
+                <img alt="" style={img} src={props.dane.okladka}></img><br/>
                 <span style={tytulStyl}>{props.dane.tytul}</span><span style={podtytulStyl}>{props.dane.podtytul}</span><br/>
                 <span style={rokStyl}>Data premiery: {props.dane.dataPremiery}</span><br/>
                 <span style={rokStyl}>Data premiery w Polsce: {props.dane.dataPremieryPl}</span>

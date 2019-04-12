@@ -6,13 +6,12 @@ import domy from '../dane/domy'
 function HousesPage(props){
     
     return ( 
-        <body style={pageStyle}>
+        <div style={pageStyle}>
             <House dane={domy.domGryffindor}/>
             <House dane={domy.domSlytherin}/>
             <House dane={domy.domHufflepuff}/>
-            <House dane={domy.domRavenclaw}/>
-            
-        </body>
+            <House dane={domy.domRavenclaw}/> 
+        </div>
     )
 }
 

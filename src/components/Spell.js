@@ -17,41 +17,24 @@ function Spell(props){
         textAlign:"center"
     }
 
-    let czarStylZolty = {
-        color:"yellow",
-        fontWeight:"bold",
-        fontStyle:"italic",
-        textAlign:"center"
-    }
-
-    let czarStylCzerwony = {
-        color:"red",
-        fontWeight:"bold",
-        fontStyle:"italic",
-        textAlign:"center"
-    }
-
-    let stylOstateczny = czarStylBialy;
-
-    if(props.niewybaczalne == "true"){
-        stylOstateczny = czarStylCzerwony;
-    }
-
-    if(props.czar == "Lumos")
-    {
-        stylOstateczny = czarStylZolty    
+    let efektStyle = {
+        color:"white",
+        fontWeight:"normal",
+        textAlign:"center",
+        fontSize: "15px",
     }
 
 
     return ( 
         <div style={styles}>
-            <span style={stylOstateczny}>{props.czar}</span>
-
-            {props.niewybaczalne == "true" ? <span> (niewybaczalne) </span> : ''}
-            
+            <span style={czarStylBialy}>{props.czar}</span><br/>
+            <span style={efektStyle}>{props.efekt}</span><br/>
+            <span style={efektStyle}>{props.typ}</span>
             <br/><hr/>
         </div>
     )
 }
 
+
 export default Spell
+

@@ -55,16 +55,16 @@ class SortingHat extends React.Component{
     }
 
     pokazHerb(herb){
-        if (herb == "Gryffindor") {
+        if (herb === "Gryffindor") {
             document.getElementById("gryfon").style.display = "";
         }
-        if (herb == "Slytherin") {
+        if (herb === "Slytherin") {
             document.getElementById("slizgon").style.display = "";
         }
-        if (herb == "Ravenclaw") {
+        if (herb === "Ravenclaw") {
             document.getElementById("krukon").style.display = "";
         } 
-        if (herb == "Hufflepuff") {
+        if (herb === "Hufflepuff") {
             document.getElementById("puchon").style.display = "";
         } 
     }
@@ -84,11 +84,11 @@ class SortingHat extends React.Component{
     render(){
         return <div style={sortingHatStyle}>
             <p id="tytul" style={tytulStyle}>LOSUJ DOM</p>
-            <img id="tiara" onClick={() => this.callApi()} style={img} src={tiara}></img>
-            <img className="herb" id="gryfon" onClick={() => this.reset()} style={herbStyle} src={gryffindor}></img>
-            <img className="herb" id="slizgon" onClick={() => this.reset()} style={herbStyle} src={slytherin}></img>
-            <img className="herb" id="krukon" onClick={() => this.reset()} style={herbStyle} src={ravenclaw}></img>
-            <img className="herb" id="puchon" onClick={() => this.reset()} style={herbStyle} src={hufflepuff}></img>
+            <img id="tiara" alt="" onClick={() => this.callApi()} style={img} src={tiara}></img>
+            <img className="herb" id="gryfon" alt="" onClick={() => this.reset()} style={herbStyle} src={gryffindor}></img>
+            <img className="herb" id="slizgon" alt="" onClick={() => this.reset()} style={herbStyle} src={slytherin}></img>
+            <img className="herb" id="krukon" alt="" onClick={() => this.reset()} style={herbStyle} src={ravenclaw}></img>
+            <img className="herb" id="puchon" alt="" onClick={() => this.reset()} style={herbStyle} src={hufflepuff}></img>
         </div>;
     }
 }

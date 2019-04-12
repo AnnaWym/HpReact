@@ -2,36 +2,54 @@ import React from 'react'
 import Spell from './Spell'
 import pageStyle from '../Styles/pageStyle'
 
+class SpellsPage extends React.Component{
+    constructor(){
+        super();
 
-function SpellsPage(props){
+        this.state = {
+            spells: []
+        }
+    }
 
-    return (
-        <body style={pageStyle}>
-        <Spell czar="Lumos"/>
-        <Spell czar="Nox"/>
-        <Spell czar="Bombarda Maxima"/>  
-        <Spell czar="Revelio"/>
-        <Spell czar="Expelliarmus"/>
-        <Spell czar="Accio"/>
-        <Spell czar="Petrificus Totalus"/>
-        <Spell czar="Alohomora"/>
-        <Spell czar="Wingardium Leviosa"/>
-        <Spell czar="Protego"/>
-        <Spell czar="Obliviate"/>
-        <Spell czar="Expecto Patronum"/>
-        <Spell czar="Riddikulus"/>
-        <Spell czar="Reparo"/>
-        <Spell czar="Incendio"/>
-        <Spell czar="Priori Incantatem"/>
-        <Spell czar="Sectumsempra"/>
-        <Spell czar="Legilimens"/>
-        <Spell czar="Confundo"/>
-        <Spell czar="Avada Kedavra" niewybaczalne="true"/>
-        <Spell czar="Cruccio" niewybaczalne="true"/> 
-        <Spell czar="Imperio" niewybaczalne="true"/> 
-        </body>
+    componentDidMount(){
+        fetch("https://www.potterapi.com/v1/spells?key=$2a$10$Nmdn5WOVSxH27I4faNa3LuaP0CcfrXRd9Aq.EXwWkww86zdLKhi8W")
+        .then((result) =>{
+            return result.json();
+        })
+        .then((json) =>{
+            let arrayOfSpells = [];
+            Object.keys(json).forEach(function(key) {
+                arrayOfSpells.push(json[key]);
+            });
 
-    )
+            this.setState({
+                spells: arrayOfSpells
+            });
+            console.log(json[0])
+        })
+    }
+
+    render(){
+        
+        let spellComponents = this.state.spells.map(spell => 
+            <Spell key={spell._id} czar={spell.spell} efekt={spell.effect} typ={spell.type}/>     
+        )
+
+        /*let spellComponents = this.state.spells.map(spell => 
+            {
+                if(spell.type=="Charm"){
+                    return <Spell key={spell._id} czar={spell.spell} efekt={spell.effect} typ={spell.type}/>
+                }
+            }
+        )
+         */
+        
+        return (
+            <div style={pageStyle}>
+                {spellComponents}
+            </div>
+        )
+    }
 }
 
 export default SpellsPage
