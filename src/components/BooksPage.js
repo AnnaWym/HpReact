@@ -8,7 +8,7 @@ import Row from 'react-bootstrap/Row'
 function BooksPage(props){
 
     return ( 
-        <body style={pageStyle}>
+        <div style={pageStyle}>
         <Container>
             <Row>
                 <Book dane={ksiazki.HP1}/>
@@ -20,7 +20,7 @@ function BooksPage(props){
                 <Book dane={ksiazki.HP7}/>
             </Row>
         </Container>
-        </body>
+        </div>
     )
 }
 

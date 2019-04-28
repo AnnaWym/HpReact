@@ -4,6 +4,7 @@ import HomePage from "./HomePage"
 import BooksPage from "./BooksPage"
 import SpellsPage from "./SpellsPage"
 import HousesPage from "./HousesPage"
+import CharactersPage from "./CharactersPage"
 import "../Styles/menu.css"
 
 function Content(){
@@ -35,12 +36,19 @@ function Content(){
                         Domy
                         </div> 
                     </Link>
+
+                    <Link to="/characters" >
+                        <div className="option">
+                        Postaci
+                        </div> 
+                    </Link>
                 </div>
                 
                 <Route exact path="/" component={HomePage} />
                 <Route path="/books" component={BooksPage} />
                 <Route path="/spells" component={SpellsPage}/>
                 <Route path="/houses" component={HousesPage}/>
+                <Route path="/characters" component={CharactersPage}/>
             </div>
         </Router>
     )
